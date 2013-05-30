@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Turtle Graphics - Test Page</title>
+    <meta charset="utf-8">
+    <script type='text/javascript' src='turtle.js'></script>
+  </head>
+  <body>
+    <h2>Turtles on Canvas</h2>
+    <canvas id="screen" width="384" height="256" style="background-color: black; border: 1px solid black">
+      Canvas not supported on this browser
+    </canvas>
+    <script>
+      var t = new Turtle("screen");
+      function Square()
+      {
+          t.fd(100);
+          t.rt(90);
+          t.fd(100);
+          t.rt(90);
+          t.fd(100);
+          t.rt(90);
+          t.fd(100);
+          t.rt(90);
+      }
+      
+      function Squares()
+      {
+          Square(); t.rt(30);
+          Square(); t.rt(30);
+          Square(); t.rt(30);
+          Square(); t.rt(30);
+          Square(); t.rt(30);
+          Square(); t.rt(30);
+          Square(); t.rt(30);
+          Square(); t.rt(30);
+          Square(); t.rt(30);
+          Square(); t.rt(30);
+          Square(); t.rt(30);
+          Square(); t.rt(30);
+      }    
+
+      t.SquareSz = function (sz)
+      {
+          this.fd(sz);
+          this.rt(90);
+          this.fd(sz);
+          this.rt(90);
+          this.fd(sz);
+          this.rt(90);
+          this.fd(sz);
+          this.rt(90);
+      }
+
+      t.SquareSpiral = function()
+      {
+         for (var i = 1; i <= 36; i++)
+         {
+              this.SquareSz(i * 5); this.rt(10);
+         }
+      }
+
+    </script>
+    <div>
+      <input type="button" value="Square"         onclick="Square();         return false;"/>&nbsp;&nbsp;
+      <input type="button" value="Squares"        onclick="Squares();        return false;"/>&nbsp;&nbsp;
+      <input type="button" value="SquareSpiral"   onclick="t.SquareSpiral(); return false;"/>
+      <input type="button" value="Clear"          onclick="t.clear();        return false;"/>
+    </div
+  </body>
+</html>
