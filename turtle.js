@@ -4,6 +4,8 @@
 //
 // (c) 2013 Edward F. Hardebeck
 //
+// Original at https://github.com/ehardebeck/turtle
+//
 // Turtle graphics is a form of polar coordinate vector graphics
 // initially developed as part of the Logo programming language
 // invented by Seymour Papert and Wally Feurzeig.  The original 
